@@ -21,16 +21,10 @@ output2str = str(output)
 
 # Verifica se foi possível executar o comando
 if output2str.find(network) == -1:
-    print('Não foi possível executar o comando arp\nFinalizando em 5 segundos!')
-    sleep(1)
-    print(4)
-    sleep(1)
-    print(3)
-    sleep(1)
-    print(2)
-    sleep(1)
-    print(1)
-    sleep(1)
+    print('Não foi possível executar o comando arp\nFinalizando em 6 segundos!')
+    for i in range(1,7):
+        print((7-i), end="\r")
+        sleep(1)
     finish()
 
 # Cria um array e preenche com todos ips da rede
